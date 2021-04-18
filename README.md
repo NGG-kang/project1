@@ -269,6 +269,7 @@ $ python manage.py runserver
      데이터베이스 삭제, 재생성 하니 성공!
 
  <br>    
+ <br>
 
 ## 이미지
 
@@ -276,49 +277,49 @@ $ python manage.py runserver
 
    ![login](https://user-images.githubusercontent.com/77260277/115133316-2d1b9480-a042-11eb-98b7-9b6722f0b4f8.PNG)
 
-   
+   <br>
 
 2. 회원가입
 
    ![signup](https://user-images.githubusercontent.com/77260277/115133320-2e4cc180-a042-11eb-9302-881b653af218.PNG)
 
-   
+   <br>
 
 3. 로그인 하면 `profile`페이지로 이동, 게시글이랑 프로필은 예시
 
    <img src="https://user-images.githubusercontent.com/77260277/115133318-2db42b00-a042-11eb-9692-90d738e660bc.PNG" alt="profile" style="zoom:50%;" />
 
-   
+   <br>
 
 4. 프로필 수정
 
    ![profile_edit](https://user-images.githubusercontent.com/77260277/115133319-2db42b00-a042-11eb-8b09-f8bcb231b4da.PNG)
 
-   
+   <br>
 
 5. 팔로워 추천
 
    ![follow_recommend](https://user-images.githubusercontent.com/77260277/115133314-2c82fe00-a042-11eb-9f0d-5633b8cbe3c3.PNG)
 
-   
+   <br>
 
 6. 팔로잉 리스트
 
    ![following_list](https://user-images.githubusercontent.com/77260277/115133315-2c82fe00-a042-11eb-832f-20030231c222.PNG)
 
-   
+   <br>
 
 7. 게시글 디테일
 
    <img src="https://user-images.githubusercontent.com/77260277/115133311-2ab93a80-a042-11eb-92ee-ad223c15d25b.PNG" alt="board_detail" style="zoom:50%;" />
 
-   
+   <br>
 
 8. 게시글 수정
 
    ![post_edit](https://user-images.githubusercontent.com/77260277/115133317-2d1b9480-a042-11eb-9938-66ac54fdee99.PNG)
 
-   
+   <br>
 
 9. 코멘트 및 수정
 
@@ -326,6 +327,8 @@ $ python manage.py runserver
 
    ![comment_and_edit](https://user-images.githubusercontent.com/77260277/115133312-2bea6780-a042-11eb-9012-1a9a132830fa.PNG)
 
+
+<br>
 
 ## 버그 또는 미해결 문제
 
@@ -336,14 +339,14 @@ $ python manage.py runserver
 아마 manytomany로 구성해서 그런것 같은데... 
 model을 구성하는데 있어서 있는대로 구성하다보니 발생한 문제같다
 
-
+<br>
 
 **이미지 리사이징 문제**
 
 게시판 형태로 만들다보니 이미지 크기가 안맞으면 이미지가 찌그러지는 현상...
 다른 이미지 리사이징 코드를 몇가지 넣어봤지만 리사이징이 안된다 :(
 
-
+<br>
 
 ## 참고 내용
 
