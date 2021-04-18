@@ -34,9 +34,7 @@ Database : `sqlite3`(dev) | `mysql`(prod)
 
 만들면서 생각나는대로 기능을 추가한 프로젝트라 난잡하게 짜여진 코드입니다
 
-
-
-
+<br>
 
 `dev`와 `prod`로 나눠서 만들었으며
 
@@ -44,9 +42,7 @@ Database : `sqlite3`(dev) | `mysql`(prod)
 
 static이나 파일 업로드는 `aws S3`를 사용했습니다
 
-
-
-
+<br>
 
 **prod 배포**
 
@@ -56,9 +52,7 @@ static이나 파일 업로드는 `aws S3`를 사용했습니다
 
 이미지 참조는 하단의 이미지 구간으로 넘어가면 볼 수 있습니다
 
-
-
-
+<br>
 
 ## 프로젝트 설치[dev]
 
@@ -68,9 +62,7 @@ static이나 파일 업로드는 `aws S3`를 사용했습니다
 $ pip install -r requirements.txt
 ```
 
-
-
-
+<br>
 
 ## 프로젝트 사용법
 
@@ -85,7 +77,7 @@ $ python manage.py runserver
 `127.0.0.1:8000`접속
 
 
-
+<br>
 
 
 ## 프로젝트 기능 설명
@@ -99,7 +91,7 @@ $ python manage.py runserver
   **follows : **다른 유저 팔로우 기능
 
   
-
+<br>
 
 
 - #### read
@@ -111,7 +103,7 @@ $ python manage.py runserver
 
   **follower_list : **팔로우 된 유저들 리스트
 
-  
+  <br>
 
 - #### update
 
@@ -119,13 +111,13 @@ $ python manage.py runserver
 
   **comment_edit : ** 댓글 수정
 
-  
+  <br>
 
 - #### delete
 
   **unfollow : **기존 팔로우 유저 팔로우 취소
 
-  
+  <br>
 
 - ### 기타
 
@@ -134,7 +126,7 @@ $ python manage.py runserver
   **logout : **로그아웃
 
   
-
+<br>
 
 
 ### nboard app
@@ -145,19 +137,19 @@ $ python manage.py runserver
 
   **post_like : **게시글 좋아요 기능
 
-  
+  <br>
 
 - #### read
 
   **post_detail : **작성된 게시글 상세보기
 
-  
+  <br>
 
 - #### update
 
   **post_update : **게시글 수정
 
-  
+  <br>
 
 - #### delete
 
@@ -168,7 +160,7 @@ $ python manage.py runserver
   **post_unlike : ** 게시글 좋아요 취소
 
 
-
+<br>
 
 
 
@@ -182,7 +174,7 @@ $ python manage.py runserver
    
    부트스트랩으로 어느정도 꾸몄으나 그래도 화면이 예쁘게 잘 나오지 않는다
 
-   
+<br>   
 
 2. **다른 앱의 view에서 model을 불러오는 문제**
    `from ..nboard.models import Post`로 불러왔더니 불가능
@@ -192,7 +184,7 @@ $ python manage.py runserver
    `pycharm`에서 `board`를 루트 디렉토리로 넣으니까
    `from nobard.models import Post`로 불러와진다
 
-   
+<br>   
 
 3. **accounts의 커스텀 user과 Profile 자동 생성 문제**
 
@@ -205,7 +197,7 @@ $ python manage.py runserver
 
    물론 코드를 보니까 `signal`을 사용해서 뭐 어떻게 하는것 같은데... 나중에 알아보도록 하자
 
-   
+<br>   
 
 4. **민감한 템플릿 코드 문제**
 
@@ -214,7 +206,7 @@ $ python manage.py runserver
    그리고 탬플릿 코드 띄어쓰기 실수 했더니 바로 에러가 발생함
    탬플릿 코드는 아주 민감해서 주의해줘야 할 내용인걸 알았다
 
-   
+<br>   
 
 5. **model을 설계를 하지 않고 기능 생각나는대로 추가 했더니 꼬이는 문제**
 
@@ -226,21 +218,21 @@ $ python manage.py runserver
 
    다음번엔 모델 설계를 하고 진행을 해 봐야겠다
 
-   
+<br>   
 
 
 5. **다양한 탬플릿 코드들이 존재하는데 그걸 사용하면 유용하게 쓰일 수 있다는 점**
    `textarea` 자동 줄바꿈이 적용이 가능하다는 점
    `humanize`의 `naturaltime`를 사용하면, 시간의 계산이 없어도 자동으로 몇분 전인지 알려준다
 
-   
+<br>   
 
 6. **커스텀 탬플릿태그를 이용하여 필터를 적용 할 수 있다는 점**
 
    커스텀 템플릿 태그를 사용하여 return값들을 커스텀하여 돌려줄수 있다는 점이 새로웠다
    단 `view`에서 사용되지 않고, `model`과 `template`에서 사용된다는 점
 
-   
+<br>   
 
 7. **aws 연동 과정에서의 애로사항**
 
@@ -252,6 +244,8 @@ $ python manage.py runserver
      다음 프로젝트는 `python airplane`으로 `docker`를 짜서 하던지
      `aws elastic Beanstalk` 으로 docker 배포가 가능하다고 하니 그 기능을 써봐야겠다
 
+<br>
+
    - **static, media**
 
      다음으로S3로 `static`, `media` 저장 과정에서 `버킷 정책` 지정과 `CORS`구성문제...
@@ -261,7 +255,7 @@ $ python manage.py runserver
      `django-storages` 설정에 `AWS_S3_FILE_OVERWRITE = False`라는게 있어서 적용해보니
      `django`딴에서 중복 파일들 `rename` 해주는 기능이 잘 작동하는걸 알았다
 
-   
+  <br> 
 
    - **database**
 
@@ -274,57 +268,55 @@ $ python manage.py runserver
      데이터베이스 설정에 utf8, settings의 database option에도 utf8을 줬으나 그래도 여전히 인코딩에러
      데이터베이스 삭제, 재생성 하니 성공!
 
-     
+ <br>    
 
 ## 이미지
 
 1. 맨 처음 들어가면 보이는 로그인 화면
 
-   ![login](C:\Users\kang\Desktop\project1\capture\login.PNG)
+   ![login](https://user-images.githubusercontent.com/77260277/115133316-2d1b9480-a042-11eb-98b7-9b6722f0b4f8.PNG)
 
    
 
 2. 회원가입
 
-   ![signup](C:\Users\kang\Desktop\project1\capture\signup.PNG)
+   ![signup](https://user-images.githubusercontent.com/77260277/115133320-2e4cc180-a042-11eb-9302-881b653af218.PNG)
 
    
 
 3. 로그인 하면 `profile`페이지로 이동, 게시글이랑 프로필은 예시
 
-   <img src="C:\Users\kang\Desktop\project1\capture\profile.PNG" alt="profile" style="zoom:50%;" />
+   <img src="https://user-images.githubusercontent.com/77260277/115133318-2db42b00-a042-11eb-9692-90d738e660bc.PNG" alt="profile" style="zoom:50%;" />
 
    
 
 4. 프로필 수정
 
-   ![profile_edit](C:\Users\kang\Desktop\project1\capture\profile_edit.PNG)
-
-   ![profile_edit](C:\Users\kang\Desktop\project1\capture\profile_edit.PNG)
+   ![profile_edit](https://user-images.githubusercontent.com/77260277/115133319-2db42b00-a042-11eb-8b09-f8bcb231b4da.PNG)
 
    
 
 5. 팔로워 추천
 
-   ![follow_recommend](C:\Users\kang\Desktop\project1\capture\follow_recommend.PNG)
+   ![follow_recommend](https://user-images.githubusercontent.com/77260277/115133314-2c82fe00-a042-11eb-9f0d-5633b8cbe3c3.PNG)
 
    
 
 6. 팔로잉 리스트
 
-   ![following_list](C:\Users\kang\Desktop\project1\capture\following_list.PNG)
+   ![following_list](https://user-images.githubusercontent.com/77260277/115133315-2c82fe00-a042-11eb-832f-20030231c222.PNG)
 
    
 
 7. 게시글 디테일
 
-   <img src="C:\Users\kang\Desktop\project1\capture\board_detail.PNG" alt="board_detail" style="zoom:50%;" />
+   <img src="https://user-images.githubusercontent.com/77260277/115133311-2ab93a80-a042-11eb-92ee-ad223c15d25b.PNG" alt="board_detail" style="zoom:50%;" />
 
    
 
 8. 게시글 수정
 
-   ![post_edit](C:\Users\kang\Desktop\project1\capture\post_edit.PNG)
+   ![post_edit](https://user-images.githubusercontent.com/77260277/115133317-2d1b9480-a042-11eb-9938-66ac54fdee99.PNG)
 
    
 
@@ -332,8 +324,7 @@ $ python manage.py runserver
 
    수정을 누르면 하단 코멘트 form에 수정할 내용이 추가됨
 
-   ![comment_and_edit](C:\Users\kang\Desktop\project1\capture\comment_and_edit.PNG)
-
+   ![comment_and_edit](https://user-images.githubusercontent.com/77260277/115133312-2bea6780-a042-11eb-9012-1a9a132830fa.PNG)
 
 
 ## 버그 또는 미해결 문제
