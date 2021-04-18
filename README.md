@@ -28,6 +28,8 @@ Database : `sqlite3`(dev) | `mysql`(prod)
 
 
 
+
+
 ## 프로젝트 설명 및 주의사항
 
 `django`를 기반으로 짧게나마 공부 했던 내용을 **게시판** 개념으로 만들어가면서 이해하기 위해 만든 프로젝트 입니다
@@ -36,11 +38,15 @@ Database : `sqlite3`(dev) | `mysql`(prod)
 
 
 
+
+
 `dev`와 `prod`로 나눠서 만들었으며
 
 `prod`기반 코드는 `docker`로 `aws`의 `ec2`에 배포하였고 `DB`는 `ec2`에 `mysql`을 설치하여 테스트를 했습니다
 
 static이나 파일 업로드는 `aws S3`를 사용했습니다
+
+
 
 
 
@@ -54,6 +60,8 @@ static이나 파일 업로드는 `aws S3`를 사용했습니다
 
 
 
+
+
 ## 프로젝트 설치[dev]
 
 프로젝트 기본 설치
@@ -61,6 +69,8 @@ static이나 파일 업로드는 `aws S3`를 사용했습니다
 ```
 $ pip install -r requirements.txt
 ```
+
+
 
 
 
@@ -78,6 +88,8 @@ $ python manage.py runserver
 
 
 
+
+
 ## 프로젝트 기능 설명
 
 ### accounts app
@@ -89,6 +101,8 @@ $ python manage.py runserver
   **follows : **다른 유저 팔로우 기능
 
   
+
+
 
 - #### read
 
