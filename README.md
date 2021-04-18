@@ -86,9 +86,9 @@ $ python manage.py runserver
 
 - #### create
 
-  **signup : ** 간단한 회원가입 기능 아이디, 이름, 이메일, 패스워드 입력만으로 가입 가능
+  **signup:** 간단한 회원가입 기능 아이디, 이름, 이메일, 패스워드 입력만으로 가입 가능
 
-  **follows : **다른 유저 팔로우 기능
+  **follows:**다른 유저 팔로우 기능
 
   
 <br>
@@ -96,34 +96,34 @@ $ python manage.py runserver
 
 - #### read
 
-  **profile : ** 유저 생성시 프로파일 자동 생성, 프로파일 이미지와 상태메시지를 보여준다, 기본값 empty
+  **profile:** 유저 생성시 프로파일 자동 생성, 프로파일 이미지와 상태메시지를 보여준다, 기본값 empty
   				 유저가 생성한 게시글 리스트`post_list`도 같이 보여줌
 
-  **follow_recommend : ** 팔로우 유저 추천 기능, 팔로우가 안된 유저들 전부를 불러온다
+  **follow_recommend:** 팔로우 유저 추천 기능, 팔로우가 안된 유저들 전부를 불러온다
 
-  **follower_list : **팔로우 된 유저들 리스트
+  **follower_list:**팔로우 된 유저들 리스트
 
   <br>
 
 - #### update
 
-  **profile_edit : ** 프로파일 이미지와 상태메시지를 보여준다
+  **profile_edit:** 프로파일 이미지와 상태메시지를 보여준다
 
-  **comment_edit : ** 댓글 수정
+  **comment_edit:** 댓글 수정
 
   <br>
 
 - #### delete
 
-  **unfollow : **기존 팔로우 유저 팔로우 취소
+  **unfollow:**기존 팔로우 유저 팔로우 취소
 
   <br>
 
 - ### 기타
 
-  **login : **로그인
+  **login:**로그인
 
-  **logout : **로그아웃
+  **logout:**로그아웃
 
   
 <br>
@@ -133,31 +133,31 @@ $ python manage.py runserver
 
 - #### create
 
-  **post_create : **게시글 생성 기능
+  **post_create:**게시글 생성 기능
 
-  **post_like : **게시글 좋아요 기능
+  **post_like:**게시글 좋아요 기능
 
   <br>
 
 - #### read
 
-  **post_detail : **작성된 게시글 상세보기
+  **post_detail:**작성된 게시글 상세보기
 
   <br>
 
 - #### update
 
-  **post_update : **게시글 수정
+  **post_update:**게시글 수정
 
   <br>
 
 - #### delete
 
-  **comment_delete : **댓글 삭제
+  **comment_delete:**댓글 삭제
 
-  **post_delete : **게시글 삭제
+  **post_delete:**게시글 삭제
 
-  **post_unlike : ** 게시글 좋아요 취소
+  **post_unlike:** 게시글 좋아요 취소
 
 
 <br>
@@ -333,6 +333,7 @@ $ python manage.py runserver
 ## 버그 또는 미해결 문제
 
 **팔로우 문제**
+
 팔로우 manytomany로 self user로 연결했는데 
 예를 들어 1번과 2번 유저가 있다면, 
 1번 유저가 2번 유저를 팔로우 할 시 2번 유저도 1번 유저가 팔로우 되는 증상이 있다
