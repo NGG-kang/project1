@@ -1,0 +1,14 @@
+{% block content %}
+{% if follower_list %}
+<div class="container">
+    <ul class="list-group">
+        {% for follower in follower_list %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{follower}}
+            <a class="btn btn-primary" href="{% url 'accounts:user_unfollow' follower %}">언팔로우</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+{% endblock %}

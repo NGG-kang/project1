@@ -1,0 +1,35 @@
+{% load bootstrap4 %}
+{% block content %}
+<div class="container">
+  {% if comment_list %}
+  <div class="container">
+    {% for comment in comment_list %}
+    <div class="col">
+      <div>작성자 :{{comment.author}}</div>
+      <div>{{comment.comment}}</div>
+      {% if request.user == comment.author %}
+      <div class="container">
+        <div class="">
+          <form action="" method="get">
+            <input type="hidden" value="{{ comment.pk }}" name="pk" />
+            <input type="submit" value="수정" />
+          </form>
+
+          <a href="{% url 'nboard:comment_delete' post.pk comment.pk %}">삭제</a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    <hr />
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+<div class="container">
+  {% if comment_edit_form %}
+    {% include "nboard/form.html" with submit_label="코멘트 수정" %}
+  {% else %}
+    {% include "form.html" with submit_label="코멘트 저장" %}
+  {% endif %}
+</div>
+{% endblock %}

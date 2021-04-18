@@ -1,0 +1,14 @@
+{% block content %}
+{% if suggested_user_list %}
+<div class="container">
+    <ul class="list-group">
+        {% for suggested in suggested_user_list %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{suggested}}
+            <a class="btn btn-primary" href="{% url 'accounts:user_follow' suggested %}">팔로우</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+{% endblock %}

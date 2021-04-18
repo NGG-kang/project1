@@ -1,0 +1,15 @@
+{% load bootstrap4 %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <form method="post" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <button type="submit" class="btn btn-primary mt-2">
+                {{ submit_label|default:"Submit" }}
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

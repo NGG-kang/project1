@@ -1,0 +1,7 @@
+-r common.txt
+
+gunicorn
+psycopg2-binary
+django-storages
+boto3
+mysqlclient
