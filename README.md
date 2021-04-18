@@ -26,9 +26,7 @@ Database : `sqlite3`(dev) | `mysql`(prod)
 
 라이브러리 : `requirements` 폴더 참조
 
-
-
-
+<br>
 
 ## 프로젝트 설명 및 주의사항
 
